@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.47.0'
+project:
+    name: SnowFakery
+    package:
+        name: SnowFakery
+        api_version: '52.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/SnowFakery/tests
+            options:
+                outputdir: robot/SnowFakery/results
+
+    robot_testdoc:
+        options:
+            path: robot/SnowFakery/tests
+            output: robot/SnowFakery/doc/SnowFakery_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75

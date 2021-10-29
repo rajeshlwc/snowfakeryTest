@@ -1,0 +1,12 @@
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
+- plugin: snowfakery.standard_plugins.Math
+- object: Account
+  count: 2
+  fields:
+    name: ${{fake.Company}}
+    Type:
+      random_choice:
+        Enterprise: 20
+        Mid-Market: 30
+        Small Business: 10
+        Client: 40
